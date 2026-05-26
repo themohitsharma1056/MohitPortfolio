@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+
+
+</head>
+<body>
+	<nav class="navbar" th:fragment="navbar">
+		<div class="logo"> MOHIT PORTFOLIO </div>
+		<div class="hamburger" id="hamburger"> ☰ </div>
+		<div class="mobile-menu" id="mobileMenu">
+			<div class="close-btn" id="closeBtn"> ✕ </div> <a th:href="@{/}">Home</a> <a th:href="@{/about}">About</a>
+			<a th:href="@{/projects}">Projects</a><a th:href="@{/skills}">Skills</a> 
+			 <a th:href="@{/contact}">Contact</a>
+		</div>
+		<div class="desktop-links"> <a th:href="@{/}">Home</a> <a th:href="@{/about}">About</a> 
+		<a th:href="@{/projects}">Projects</a><a th:href="@{/skills}">Skills</a>  <a
+				th:href="@{/contact}">Contact</a> </div>
+	</nav>
+	
+</body>
+
+</html>
