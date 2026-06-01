@@ -38,3 +38,7 @@ build/
 
 # Logs
 *.log
+
+# OS Files
+.DS_Store
+Thumbs.db

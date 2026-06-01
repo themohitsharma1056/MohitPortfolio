@@ -6,22 +6,36 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+   	<link rel="icon"
+      type="image/svg+xml"
+      href="/images/favicon_mohit.svg">
    
 
 
 </head>
 <body>
+     
 	<nav class="navbar" th:fragment="navbar">
+	<div id="scroll-progress"></div>
 		<div class="logo"> MOHIT PORTFOLIO </div>
 		<div class="hamburger" id="hamburger"> ☰ </div>
 		<div class="mobile-menu" id="mobileMenu">
-			<div class="close-btn" id="closeBtn"> ✕ </div> <a th:href="@{/}">Home</a> <a th:href="@{/about}">About</a>
-			<a th:href="@{/projects}">Projects</a><a th:href="@{/skills}">Skills</a> 
-			 <a th:href="@{/contact}">Contact</a>
+			<div class="close-btn" id="closeBtn"> ✕ </div> 
+			
+		<a id="mobileHomeLink" th:href="@{/}">Home</a>
+        <a id="mobileAboutLink" th:href="@{/about}">About</a>
+       <a id="mobileProjectsLink" th:href="@{/projects}">Projects</a>
+       <a id="mobileSkillsLink" th:href="@{/skills}">Skills</a>
+       <a id="mobileContactLink" th:href="@{/contact}">Contact</a>
+       
 		</div>
-		<div class="desktop-links"> <a th:href="@{/}">Home</a> <a th:href="@{/about}">About</a> 
-		<a th:href="@{/projects}">Projects</a><a th:href="@{/skills}">Skills</a>  <a
-				th:href="@{/contact}">Contact</a> </div>
+		<div class="desktop-links">
+       <a id="homeLink" th:href="@{/}">Home</a>
+       <a id="aboutLink" th:href="@{/about}">About</a>
+       <a id="projectsLink" th:href="@{/projects}">Projects</a>
+       <a id="skillsLink" th:href="@{/skills}">Skills</a>
+       <a id="contactLink" th:href="@{/contact}">Contact</a>
+				</div>
 	</nav>
 	
 </body>
