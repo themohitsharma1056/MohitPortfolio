@@ -27,31 +27,17 @@
 
     <div class="main-container">
 
-        <div th:replace="fragments/navbar :: navbar"></div>
-
-
-
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
 
 <section class="contact-hero-section">
 
     <div class="container">
 
-
-
-
         <div class="row align-items-start">
-
-
-
 
             <div class="col-lg-6">
 
-
-
-
                 <div class="contact-left reveal">
-
-
 
 
                     <span class="contact-badge">
@@ -61,23 +47,12 @@
                     </span>
 
 
-
-
-
-
-
                     <h1>
 
                         Let’s Build Something
                         Meaningful Together
 
                     </h1>
-
-
-
-
-
-
 
                     <p>
 
@@ -87,13 +62,6 @@
                         building, and connecting with creative people.
 
                     </p>
-
-
-
-
-
-
-
 
                     <div class="contact-status-group">
 
@@ -297,27 +265,32 @@
                         Send a Message
 
                     </h3>
+            <div class="success-message" th:if="${successMessage}" th:text="${successMessage}"></div>
 
-                    <form>
+                    <form  th:action="@{contact/send}"method="post">
+                    
+                     <input type="hidden"
+                        th:name="${_csrf.parameterName}"
+                             th:value="${_csrf.token}">  
 
                         <div class="form-group">
 
-                            <input type="text"
-                                   placeholder="Your Name">
+                            <input type="text" name="name"
+                                   placeholder="Your Name" required>
 
                         </div>
 
                         <div class="form-group">
 
                             <input type="email"
-                                   placeholder="Your Email">
+                                  name="email" placeholder="Your Email"required>
 
                         </div>
 
                         <div class="form-group">
 
-                            <textarea rows="6"
-                                      placeholder="Your Message"></textarea>
+                            <textarea  name="message" rows="6"
+                                    placeholder="Your Message"required></textarea>
 
                         </div>
 
