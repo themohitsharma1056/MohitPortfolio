@@ -32,15 +32,20 @@ public class ContactController {
     	
     	contactService.processMessage(contactMessage);
     	
-    	emailService.sendContactNotification(
+    	try {
 
+    	    emailService.sendContactNotification(
     	        contactMessage.getName(),
-
     	        contactMessage.getEmail(),
-
     	        contactMessage.getMessage()
+    	    );
 
-    	);
+    	} catch (Exception e) {
+
+    	    System.out.println("Email notification failed.");
+    	    e.printStackTrace();
+
+    	}
     
     	redirectAttributes.addFlashAttribute(
     			
